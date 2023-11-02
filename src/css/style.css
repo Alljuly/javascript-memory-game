@@ -8,6 +8,7 @@ body {
   align-self: center;
   color: #ffffff;
   background-color: #03001c;
+  user-select: none;
 }
 
 .title {
@@ -35,7 +36,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: solid red 1px;
   margin: 0;
 
   min-height: max-content;
@@ -61,6 +61,7 @@ body {
 
   transform: rotateY(180deg);
   transition: 0.25s;
+  cursor: pointer;
 }
 
 .card::after {
@@ -80,6 +81,14 @@ body {
   );
 
   backface-visibility: hidden;
+}
+
+.card.open {
+  transform: rotateY(0deg);
+}
+
+.open::after {
+  transform: rotateY(180deg);
 }
 
 .reset {
